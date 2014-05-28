@@ -1,0 +1,394 @@
+/**
+* component-styleguide.css
+*
+*/
+
+html, body
+{
+    font-family: 'SST Roman', sans-serif;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.styleguide-body
+{
+    max-width: 100%;
+    margin: 0 auto;
+
+    /*Use these properties from your main css instead*/
+    color: #fff;
+    background-color: #000;
+}
+
+body > h1
+{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 40px;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    letter-spacing: -1px;
+
+    color: inherit;
+}
+body > h2,
+.styleguide-header,
+body > p
+{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+
+    margin-bottom: 1rem;
+    padding: 1em 1em .2em;
+
+    color: #555;
+    border-bottom: 2px solid #222;
+}
+
+body > h1
+{
+    font-size: 300%;
+}
+body > h2
+{
+    font-size: 200%;
+}
+body > p
+{
+    font-size: 125%;
+
+    border: none;
+}
+a, a:visited, a:hover, a:active
+{
+    color: inherit;
+}
+
+
+.styleguide-header
+{
+    text-align: center;
+}
+.styleguide-header img
+{
+    position: relative;
+    z-index: 2;
+
+    -webkit-animation: logo-rotate 8s ease-in-out infinite;
+            animation: logo-rotate 8s ease-in-out infinite;
+}
+.styleguide-header h1
+{
+    font-size: 400%;
+
+    margin: 0;
+
+    -webkit-animation: fall-down 1s ease-out;
+            animation: fall-down 1s ease-out;
+}
+.styleguide-header p
+{
+    -webkit-animation: fall-down .9s ease-out;
+            animation: fall-down .9s ease-out;
+}
+
+@keyframes fall-down
+{
+    from
+    {
+        transform: translateY(-50px);
+    }
+    to
+    {
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes fall-down
+{
+    from
+    {
+        -webkit-transform: translateY(-50px);
+    }
+    to
+    {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes logo-rotate
+{
+    0%
+    {
+        -webkit-transform: rotate(0deg);
+    }
+    75%
+    {
+        -webkit-transform: rotate(0deg);
+    }
+    100%
+    {
+        -webkit-transform: rotate(-359deg);
+    }
+}
+@keyframes logo-rotate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    75%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(-359deg);
+    }
+}
+
+.styleguide
+{
+    margin: 1em;
+}
+
+.styleguide table.code-styleguides td
+{
+    padding: .5rem 1rem 0;
+
+    vertical-align: center;
+}
+.styleguide table.code-styleguides td:first-child
+{
+    width: 1%;
+    min-width: 200px;
+}
+.styleguide table.code-styleguides tr:first-child td:first-child:before,
+.styleguide table.code-styleguides tr:first-child td:last-child:before
+{
+    display: block;
+
+    margin-bottom: 1rem;
+
+    color: #555;
+}
+.styleguide table.code-styleguides tr:first-child td:first-child:before
+{
+    content: 'Demo';
+}
+.styleguide table.code-styleguides tr:first-child td:last-child:before
+{
+    content: 'Source';
+}
+
+body.theme-light
+{
+    background: #fff;
+}
+body.theme-light > h1,
+body.theme-light > h2
+{
+    color: #888;
+    border-bottom-color: #888;
+}
+body.theme-light .styleguide table.code-styleguides tr:first-child td:first-child:before,
+body.theme-light .styleguide table.code-styleguides tr:first-child td:last-child:before
+{
+    color: #888;
+}
+.styleguide
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+.styleguide-body
+{
+    display: flex;
+
+    flex: 1;
+}
+.styleguide-content
+{
+    flex: 1;
+}
+
+.styleguide-nav
+{
+  /* 12em is the width of the columns */
+    flex: 0 0 12em;
+}
+
+.styleguide-nav
+{
+  /* put the nav on the left */
+    order: -1;
+}
+
+/*styleguide-menu*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+input[id*='styleguide-menu']
+{
+    display: none;
+}
+
+input[id*='styleguide-menu'] + label
+{
+    font-size: 30px;
+
+    display: block;
+
+    width: 35px;
+    height: 35px;
+
+    cursor: pointer;
+
+    color: #fff;
+    background: #222;
+}
+
+input[id*='styleguide-menu'] + label span
+{
+    left: 8px;
+
+    display: block;
+
+    transition: .2s;
+}
+
+input[id*='styleguide-menu']:checked + label span
+{
+    font-size: 34px;
+
+    top: -2px;
+    left: 9px;
+
+    transform: rotate(45deg);
+}
+
+nav a
+{
+    line-height: 40px;
+
+    display: block;
+
+    width: 150px;
+    height: 40px;
+    padding-left: 10px;
+
+    text-decoration: none;
+
+    color: white;
+    background: #3e3e3e;
+    box-shadow: 5px 0 0 #000;
+}
+
+input[id*='styleguide-menu'] ~ nav a:nth-child(1)
+{
+    transition-delay: .05s;
+
+    box-shadow: 5px 0 0 #3498db;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(2)
+{
+    transition-delay: .10s;
+
+    box-shadow: 5px 0 0 #2ecc71;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(3)
+{
+    transition-delay: .15s;
+
+    box-shadow: 5px 0 0 #e67e22;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(4)
+{
+    transition-delay: .20s;
+
+    box-shadow: 5px 0 0 #c0392b;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(5)
+{
+    transition-delay: .25s;
+
+    box-shadow: 5px 0 0 #2c3e50;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(6)
+{
+    transition-delay: .30s;
+
+    box-shadow: 5px 0 0 #f1c40f;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(7)
+{
+    transition-delay: .30s;
+
+    box-shadow: 5px 0 0 #363;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(8)
+{
+    transition-delay: .30s;
+
+    box-shadow: 5px 0 0 #f09;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(9)
+{
+    transition-delay: .30s;
+
+    box-shadow: 5px 0 0 #909;
+}
+input[id*='styleguide-menu'] ~ nav a:nth-child(10)
+{
+    transition-delay: .30s;
+
+    box-shadow: 5px 0 0 #63c;
+}
+input[id*='styleguide-menu']:checked ~ nav a
+{
+    margin-left: 0;
+}
+
+input[id*='styleguide-menu']:checked ~ nav a:hover
+{
+    width: 155px;
+}
+
+input[id*='styleguide-menu'] ~ nav a
+{
+    margin-left: -155px;
+
+    transition: .6s margin;
+}
+
+input[id*='styleguide-menu'] ~ nav a:hover
+{
+    background: #999;
+}
+.styleguide-cirkel-con
+{
+    margin-top:30px;
+}
+.styleguide-circle
+{
+    float:left;
+    font-size: .8em;
+    line-height: 6.0em;
+
+    width: 150px;
+    height: 150px;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 75px;
+    border: solid 2px #fff;
+
+    margin:10px;
+}

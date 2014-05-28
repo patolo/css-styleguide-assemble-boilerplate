@@ -1,0 +1,27 @@
+# Project build files
+/dist/
+/client/dist
+/.tmp/
+/cdn/
+*.tgz
+
+# IDEA, WebStorm project settings
+/.idea/
+/*.iml
+*.sublime-workspace
+
+
+# Bower artifacts
+bower_components/
+packages/
+
+# styleguide
+_gh_pages/
+
+# Vim tmp files
+*~*
+*.swp
+*.swo
+
+# Logs
+*.log

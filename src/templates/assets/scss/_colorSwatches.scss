@@ -1,0 +1,117 @@
+/**
+ * colorSwatches.css
+ *
+ */
+
+$color-opacity: .56;
+$color-create: rgb(243,120,45);
+$color-music: rgb(173, 44, 207);
+$color-watch: rgb(218, 43, 47);
+$color-books: rgb(146, 203, 57);
+$color-lifebookmarks: rgba(0, 0, 0, $color-opacity);
+$color-edit: rgba(0, 0, 0, $color-opacity);
+$color-calories: rgb(237, 82, 61);
+$color-steps: rgb(142, 173, 17);
+$color-walking: rgb(59, 148, 55);
+$color-running: rgb(255, 78, 115);
+$color-cycling: rgb(180, 40, 114);
+$color-transport: rgb(0, 145, 150);
+$color-communication: rgb(26, 92, 168);
+$color-games: rgb(51, 180, 218);
+$color-sleep: rgb(117, 114, 204);
+$color-others: rgb(200, 200, 200);
+$color-browsing: rgb(85, 145, 230);
+
+
+@media all
+{
+    .act-create, .act-photos, .camera-album
+    {
+        background-color: $color-create;
+    }
+
+    .act-music, .act-listen
+    {
+        background-color: $color-music;
+    }
+
+    .act-watch, .act-videos
+    {
+        background-color: $color-watch;
+    }
+
+    .act-books, .act-discover
+    {
+        background-color: $color-books;
+    }
+
+    .act-lifebookmark
+    {
+        background-color: $color-lifebookmarks;
+    }
+
+    .act-edit
+    {
+        background-color: $color-edit;
+    }
+
+    .act-calories
+    {
+        background-color: $color-calories;
+    }
+
+    .act-steps
+    {
+        background-color: $color-steps;
+    }
+
+    .act-walking
+    {
+        background-color: $color-walking;
+    }
+
+    .act-running
+    {
+        background-color: $color-running;
+    }
+
+    .act-cycling
+    {
+        background-color: $color-cycling;
+    }
+
+    .act-transport, .act-train, .act-vehicle
+    {
+        background-color: $color-transport;
+    }
+
+    .act-communication, .act-social
+    {
+        background-color: $color-communication;
+    }
+
+    .act-games, .act-play
+    {
+        background-color: $color-games;
+    }
+
+    .act-sleep, .act-sleeping
+    {
+        background-color: $color-sleep;
+    }
+
+    .act-maps, .act-others, .act-weight
+    {
+        background-color: $color-others;
+    }
+
+    .act-browsing, .act-connect, .act-web
+    {
+        background-color: $color-browsing;
+    }
+
+    .fade
+    {
+        opacity: .56;
+    }
+}
